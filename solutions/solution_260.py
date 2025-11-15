@@ -6,6 +6,7 @@ class Solution:
         for num in nums:
             xor_sum ^= num
         a, b = 0, 0
+        # Separate a, b into 2 groups..
         for num in nums:
             if num & -xor_sum & xor_sum: a ^= num
             else: b ^= num
